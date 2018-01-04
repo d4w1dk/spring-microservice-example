@@ -1,0 +1,15 @@
+*.class
+
+######################
+# Intellij
+######################
+.idea/**
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+
+build/
+target/
+.gradle/
