@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: qa
+
+  cloud:
+    config:
+      uri: http://${CONFIG_SERVER:localhost}:9020
+      username: admin
+      password: admin
+
+encrypt:
+  key: ABCDEFGHIJKLMNOPQRSTUVWXYZ

@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+    - ./init_task_db.sh:/docker-entrypoint-initdb.d/init_task_db.sh
+    ports:
+    - "5432:5432"
+
+  configserver:
+    image: dkubicki/configserver-microservice
+    ports:
+    - "9020:9020"
+
+  configclient:
+    image: dkubicki/configclient-microservice
+    environment:
+      - CONFIG_SERVER=configserver
+    ports:
+    - "9010:9010"
+    depends_on:
+    - configserver
+
+  rabbitmq:
+    image: rabbitmq:3.7.8-management-alpine
+    ports:
+    - "15672:15672"
+    - "5672:5672"
+
+  deps:
+    image: dadarek/wait-for-dependencies
+    depends_on:
+    - db
+    - configserver
+    command: db:5432 configserver:9020
+
+

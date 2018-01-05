@@ -1,0 +1,24 @@
+server:
+  port: 9020
+
+spring:
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: true
+        git:
+          uri: https://github.com/dkubicki/springcloud-configserver-properties
+          search-paths:
+            - 'station*'
+          repos:
+            perf:
+              pattern: '*/perf'
+              uri: https://github.com/dkubicki/springcloud-configserver-perf
+              search-paths:
+              - 'station*'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["*"]

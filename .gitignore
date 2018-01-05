@@ -1,15 +1,14 @@
-*.class
-
-######################
-# Intellij
-######################
 .idea/**
-*.iml
 *.iws
-*.ipr
-*.ids
-*.orig
+
+*.iml
+
+.gradle
 
 build/
-target/
-.gradle/
+classes/
+out/
+
+gradle-app.setting
+.gradletasknamecache
+!gradle-wrapper.jar

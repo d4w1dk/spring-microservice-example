@@ -1,4 +1,8 @@
-rootProject.name = 'spring-microservice-example'
+rootProject.name = 'springcloud-sandpit'
 
-include 'config-microservice'
+include 'configserver-microservice'
+include 'configclient-microservice'
+include 'task-microservice'
+include 'tasksink-microservice'
+include 'taskintake-microservice'
 

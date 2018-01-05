@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: s1rates
+  profiles:
+    active: default
+
+server:
+  port: 9010
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["*"]
+
+

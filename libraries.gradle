@@ -2,63 +2,45 @@ ext {
     libraries = [
 
             // groovy
-            groovy                     : "org.codehaus.groovy:groovy-all:${groovyVersion}",
+            groovy                 : "org.codehaus.groovy:groovy-all:${groovyVersion}",
+
+            // lombok 
+            lombok                 : "org.projectlombok:lombok:${lombokVersion}",
 
             // spring boot starters
-            springBoot                 : "org.springframework.boot:spring-boot-starter",
-            springBootWeb              : "org.springframework.boot:spring-boot-starter-web",
-            springBootWebsocket        : "org.springframework.boot:spring-boot-starter-websocket",
-            springBootUndertow         : "org.springframework.boot:spring-boot-starter-undertow",
-            springBootActuator         : "org.springframework.boot:spring-boot-starter-actuator",
-            springBootDataJpa          : "org.springframework.boot:spring-boot-starter-data-jpa",
-            springBootDataMongoDB      : "org.springframework.boot:spring-boot-starter-data-mongodb",
-            springBootDataRest         : "org.springframework.boot:spring-boot-starter-data-rest",
-            springBootSecurity         : "org.springframework.boot:spring-boot-starter-security",
-            springBootHateoas          : "org.springframework.boot:spring-boot-starter-hateoas",
-            springBootIntegration      : "org.springframework.boot:spring-boot-starter-integration",
-            springBootAmqp             : "org.springframework.boot:spring-boot-starter-amqp",
-            springBootThymeleaf        : "org.springframework.boot:spring-boot-starter-thymeleaf",
-            springBootMail             : "org.springframework.boot:spring-boot-starter-mail",
-            springBootJersey           : "org.springframework.boot:spring-boot-starter-jersey",
-
+            springBoot             : "org.springframework.boot:spring-boot-starter",
+            springBootWeb          : "org.springframework.boot:spring-boot-starter-web",
+            springBootReactWeb     : "org.springframework.boot:spring-boot-starter-webflux",
+            springBootActuator     : "org.springframework.boot:spring-boot-starter-actuator",
+            springBootDataJpa      : "org.springframework.boot:spring-boot-starter-data-jpa",
+            springBootThymeleaf    : "org.springframework.boot:spring-boot-starter-thymeleaf",
+            springBootDataRest     : "org.springframework.boot:spring-boot-starter-data-rest",
+            springBootSecurity     : "org.springframework.boot:spring-boot-starter-security",
+            
             // spring cloud starters
-            springCloudConfig          : "org.springframework.cloud:spring-cloud-starter-config",
-            springCloudSecurity        : "org.springframework.cloud:spring-cloud-starter-security",
-            springCloudBusAmqp         : "org.springframework.cloud:spring-cloud-starter-bus-amqp",
-            springEureka               : "org.springframework.cloud:spring-cloud-starter-eureka",
-            springEurekaServer         : "org.springframework.cloud:spring-cloud-starter-eureka-server",
-            springFeign                : "org.springframework.cloud:spring-cloud-starter-feign",
-            springHystrix              : "org.springframework.cloud:spring-cloud-starter-hystrix",
-            springHystrixDashboard     : "org.springframework.cloud:spring-cloud-starter-hystrix-dashboard",
-            springTurbine              : "org.springframework.cloud:spring-cloud-starter-turbine",
-            springTurbineStream        : "org.springframework.cloud:spring-cloud-starter-turbine-stream",
-            springStreamRabbit         : "org.springframework.cloud:spring-cloud-starter-stream-rabbit",
-            springZuul                 : "org.springframework.cloud:spring-cloud-starter-zuul",
-            springCloudTurbineAmqp     : "org.springframework.cloud:spring-cloud-netflix-hystrix-amqp",
-            springAtlas				   : "org.springframework.cloud:spring-cloud-starter-atlas",
-            springSleuth			   : "org.springframework.cloud:spring-cloud-starter-sleuth",
-            springSleuthZipkin		   : "org.springframework.cloud:spring-cloud-sleuth-zipkin",
-            springSleuthRabbitBinder   : "org.springframework.cloud:spring-cloud-stream-binder-rabbit",
-            // spring cloud server
-            springCloudConfigServer    : "org.springframework.cloud:spring-cloud-config-server",
+            springCloudConfig      : "org.springframework.cloud:spring-cloud-starter-config",
+            springCloudSecurity    : "org.springframework.cloud:spring-cloud-starter-security",
+            springEureka           : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
+            springConsul           : "org.springframework.cloud:spring-cloud-starter-consul-all",
+            springFeign            : "org.springframework.cloud:spring-cloud-starter-openfeign",
+            springHystrix          : "org.springframework.cloud:spring-cloud-starter-netflix-hystrix",
+            springHystrixDashboard : "org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard",
+            springZuul             : "org.springframework.cloud:spring-cloud-starter-netflix-zuul",
 
+            // spring cloud server
+            springCloudConfigServer: "org.springframework.cloud:spring-cloud-config-server",
+            springCloudEurekaServer: "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server",
+
+            // devtools
+            springDevtools         : "org.springframework.boot:spring-boot-devtools",
 
             // testing
-            junit                      : 'junit:junit',
-            mockito                    : 'org.mockito:mockito-all:1.10.19',
-            spock                      : 'org.spockframework:spock-core',
-            spockSpring                : 'org.spockframework:spock-spring',
-            gatling                    : "io.gatling.highcharts:gatling-charts-highcharts:2.2.2",
-            greenMail                  : 'com.icegreen:greenmail:1.4.1',
-            dbUnit                     : 'org.dbunit:dbunit:2.5.2',
-            shazamCrest                : 'com.shazam:shazamcrest:0.11',
-            groovyHttBuilder           : 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1',
-            jsonLib                    : 'net.sf.json-lib:json-lib:2.4+',
-            jsonpath                   : 'com.jayway.jsonpath:json-path',
-            springBootTest             : "org.springframework.boot:spring-boot-starter-test",
-            springSecurityTest         : "org.springframework.security:spring-security-test",
-            hamcrestJson			   : "uk.co.datumedge:hamcrest-json:0.2",
-            boon					   : "io.fastjson:boon",
+            junit                  : 'junit:junit',
+            mockito                : 'org.mockito:mockito-all:1.10.19',
+            spock                  : 'org.spockframework:spock-core',
+            spockSpring            : 'org.spockframework:spock-spring',
+            springBootTest         : "org.springframework.boot:spring-boot-starter-test",
+            springSecurityTest     : "org.springframework.security:spring-security-test",
 
     ]
 }
