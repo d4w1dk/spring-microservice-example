@@ -10,7 +10,6 @@ ext {
             // spring boot starters
             springBoot             : "org.springframework.boot:spring-boot-starter",
             springBootWeb          : "org.springframework.boot:spring-boot-starter-web",
-            springBootReactWeb     : "org.springframework.boot:spring-boot-starter-webflux",
             springBootActuator     : "org.springframework.boot:spring-boot-starter-actuator",
             springBootDataJpa      : "org.springframework.boot:spring-boot-starter-data-jpa",
             springBootThymeleaf    : "org.springframework.boot:spring-boot-starter-thymeleaf",
@@ -19,28 +18,14 @@ ext {
             
             // spring cloud starters
             springCloudConfig      : "org.springframework.cloud:spring-cloud-starter-config",
+            springCloudOAuth      : "org.springframework.cloud:spring-cloud-starter-oauth2",
             springCloudSecurity    : "org.springframework.cloud:spring-cloud-starter-security",
-            springEureka           : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
-            springConsul           : "org.springframework.cloud:spring-cloud-starter-consul-all",
-            springFeign            : "org.springframework.cloud:spring-cloud-starter-openfeign",
-            springHystrix          : "org.springframework.cloud:spring-cloud-starter-netflix-hystrix",
-            springHystrixDashboard : "org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard",
-            springZuul             : "org.springframework.cloud:spring-cloud-starter-netflix-zuul",
 
             // spring cloud server
             springCloudConfigServer: "org.springframework.cloud:spring-cloud-config-server",
             springCloudEurekaServer: "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server",
 
             // devtools
-            springDevtools         : "org.springframework.boot:spring-boot-devtools",
-
-            // testing
-            junit                  : 'junit:junit',
-            mockito                : 'org.mockito:mockito-all:1.10.19',
-            spock                  : 'org.spockframework:spock-core',
-            spockSpring            : 'org.spockframework:spock-spring',
-            springBootTest         : "org.springframework.boot:spring-boot-starter-test",
-            springSecurityTest     : "org.springframework.security:spring-security-test",
-
+            springDevtools         : "org.springframework.boot:spring-boot-devtools"
     ]
 }

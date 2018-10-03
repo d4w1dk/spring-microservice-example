@@ -7,24 +7,21 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
-
     }
-}
-
-subprojects {
-    version = "0.0.1"
 }
 
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'com.sandpit'
-version = '0.0.1-SNAPSHOT'
+mainClassName = 'app.SecureApplication'
 sourceCompatibility = 1.8
-mainClassName = 'app.ConfigClientApplication'
+
+subprojects {
+    version = '0.0.1'
+}
 
 repositories {
     mavenCentral()
@@ -32,17 +29,17 @@ repositories {
     maven { url "https://repo.spring.io/milestone" }
 }
 
-
 ext {
     springCloudVersion = 'Finchley.SR1'
 }
 
 dependencies {
-    compile(libraries.springCloudConfig )
-    compile(libraries.springBootActuator)
+    compile(libraries.springBoot)
     compile(libraries.springBootWeb)
     compile(libraries.springBootThymeleaf)
-    compile(libraries.springDevtools)
+    compile(libraries.springCloudSecurity)
+    compile(libraries.springCloudOAuth)
+    compile('javax.inject:javax.inject:1')
 }
 
 dependencyManagement {
@@ -50,3 +47,9 @@ dependencyManagement {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
     }
 }
+
+
+
+
+
+

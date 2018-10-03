@@ -5,4 +5,6 @@ include 'configclient-microservice'
 include 'task-microservice'
 include 'tasksink-microservice'
 include 'taskintake-microservice'
+include 'secureui-microservice'
+include 'secureservice-microservice'
 
