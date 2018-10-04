@@ -7,4 +7,6 @@ include 'tasksink-microservice'
 include 'taskintake-microservice'
 include 'secureui-microservice'
 include 'secureservice-microservice'
+include 'secureauthserver-microservice'
+
 

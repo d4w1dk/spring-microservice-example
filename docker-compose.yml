@@ -19,7 +19,7 @@ services:
   configclient:
     image: dkubicki/configclient-microservice
     environment:
-      - CONFIG_SERVER=configserver
+    - CONFIG_SERVER=configserver
     ports:
     - "9010:9010"
     depends_on:
@@ -30,6 +30,21 @@ services:
     ports:
     - "15672:15672"
     - "5672:5672"
+
+  authserver:
+    image: dkubicki/secureauthserver-microservice
+    ports:
+    - "9080:9080"
+
+  secureservice:
+    image: dkubicki/secureservice-microservice
+    ports:
+    - "9070:9070"
+
+  secureui:
+    image: dkubicki/secureui-microservice
+    ports:
+    - "8080:8080"
 
   deps:
     image: dadarek/wait-for-dependencies

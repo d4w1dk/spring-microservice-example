@@ -1,0 +1,12 @@
+server:
+  port: 9080
+  servlet:
+    context-path: /services
+
+security:
+  oauth2:
+    client:
+      client-id: springcloud_sandpit
+      client-secret: springcloud_sandpit
+      authorized-grant-types: authorization_code, refresh_token, password, client_credentials
+      scope: toll_read, toll_report
