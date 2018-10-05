@@ -15,12 +15,14 @@ ext {
             springBootThymeleaf    : "org.springframework.boot:spring-boot-starter-thymeleaf",
             springBootDataRest     : "org.springframework.boot:spring-boot-starter-data-rest",
             springBootSecurity     : "org.springframework.boot:spring-boot-starter-security",
-            
+
             // spring cloud starters
             springCloudConfig      : "org.springframework.cloud:spring-cloud-starter-config",
-            springCloudOAuth      : "org.springframework.cloud:spring-cloud-starter-oauth2",
+            springCloudOAuth       : "org.springframework.cloud:spring-cloud-starter-oauth2",
             springCloudSecurity    : "org.springframework.cloud:spring-cloud-starter-security",
-
+            springCloudZipkin      : "org.springframework.cloud:spring-cloud-starter-zipkin",
+            springCloudSleuth      : "org.springframework.cloud:spring-cloud-starter-sleuth",
+            
             // spring cloud server
             springCloudConfigServer: "org.springframework.cloud:spring-cloud-config-server",
             springCloudEurekaServer: "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server",

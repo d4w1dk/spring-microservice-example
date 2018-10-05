@@ -8,5 +8,9 @@ include 'taskintake-microservice'
 include 'secureui-microservice'
 include 'secureservice-microservice'
 include 'secureauthserver-microservice'
+include 'customerservice-microservice'
+include 'dataservice1-microservice'
+include 'dataservice2-microservice'
+include 'zipkinserver-microservice'
 
 

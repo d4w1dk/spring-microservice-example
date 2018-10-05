@@ -1,0 +1,54 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.5.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+mainClassName = 'app.ZipkinServerApplication'
+sourceCompatibility = 1.8
+
+subprojects {
+    version = '0.0.1'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/snapshot" }
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+ext {
+    springCloudVersion = 'Finchley.SR1'
+}
+
+dependencies {
+    compile(libraries.springBoot)
+    compile(libraries.springBootWeb)
+    implementation("io.zipkin.java:zipkin-server:2.11.6")
+    implementation("io.zipkin.java:zipkin-autoconfigure-ui:2.11.6")
+    compile('javax.inject:javax.inject:1')
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+
+
+
+
+

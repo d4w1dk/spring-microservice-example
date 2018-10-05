@@ -1,0 +1,21 @@
+server:
+  port: 8020
+  servlet:
+    context-path: /fastpass
+
+
+spring:
+  application:
+    name: ContactDetails
+  zipkin:
+    base-url: http://localhost:8040
+  sleuth:
+    sampler:
+      probability: 1.0
+
+logging:
+  level:
+    org.springframework.cloud.sleuth: debug
+    org.springframework.cloud.zipkin: debug
+    org.springframework.web.servlet.DispatcherServlet: debug
+
